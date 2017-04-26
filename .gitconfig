@@ -1,0 +1,20 @@
+[user]
+	email = narthur157@gmail.com
+	name = Nicholas Arthur
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[core]
+	autocrlf = true
+[rerere]
+	enabled = true
+[alias]
+	s = status
+	pushup = push --set-upstream origin
+	repull = pull --rebase origin
+	d = diff
+	c = commit -m
+	ch = checkout
+	chd = checkout dev-frontend
