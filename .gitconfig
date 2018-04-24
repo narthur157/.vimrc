@@ -10,6 +10,10 @@
 	autocrlf = true
 [rerere]
 	enabled = true
+    
+[push]
+	default = simple
+
 [alias]
 	s = status
 	pushup = push --set-upstream origin
@@ -17,4 +21,4 @@
 	d = diff
 	c = commit -m
 	ch = checkout
-	chd = checkout dev-frontend
+	pu = "!git push --set-upstream origin \"$(git rev-parse --abbrev-ref HEAD)\""
